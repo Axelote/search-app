@@ -1,0 +1,29 @@
+<div class="form-group">
+  <label for="searchInput">Search</label>
+  <input type="text" class="form-control" id="searchInput" placeholder="Type for search" [(ngModel)]="searchText">
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Project name</th>
+      <th>Author</th>
+      <th>Number of stars</th>
+      <th>Number of issues</th>
+      <th>Avatar</th>
+      <th>Status</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of data | orderBy: 'name'">
+    <td class="app-project-name">{{item.name}}</td>
+    <td class="app-author">{{item.author}}</td>
+    <td class="app-stars">{{item.stars}}</td>
+    <td class="app-issues">{{item.issues}}</td>
+    <td class="app-avatar"><img src="{{item.avatar}}" alt="{{item.author}}"></td>
+    <td class="app-status">{{item.status}}</td>
+    <td class="app-link"><a href="{{item.link}}" target="_blank">{{item.link}}</a></td>
+  </tr>
+  </tbody>
+</table>

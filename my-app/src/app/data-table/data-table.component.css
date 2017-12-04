@@ -1,0 +1,14 @@
+.form-group {
+  padding: 0px 3px;
+}
+.form-group label {
+  margin-bottom: 8px;
+}
+td {
+  vertical-align: middle;
+}
+.app-avatar img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
